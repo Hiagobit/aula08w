@@ -52,7 +52,7 @@ function fnChamarProximo(fila){
 
 function fnDesfazerAcao(acao) {
     console.log("Ultima ação foi realizada");
-    acao.pop(acao)
+    acao.pop()
     
     console.log(acao);
     
@@ -68,13 +68,50 @@ function fnVerificarEstoque (amoxerifado){
 }
 // 7
 
-function fnVerificarLista(festa) {
-    console.log(festa.includes("Thiago"));
-    console.log(festa.includes("Ana"));
+function fnVerificarLista(festa, nome) {
+
+    if (festa.includes(nome) == true){
+        console.log("Você pode entrar");
+        
+    }else{
+        console.log("Você não pode entrar");
+        
+    }
+
+}
+// 8
+
+let corredores = ["Arroz", "Feijão", "Açúcar", "Café", "Sal"]
+
+function fnConsultarCorredor(corredores, item) {
+    if (corredores.includes(item) == true){
+        let ondeItem = corredores.indexOf(item) + 1
+        console.log(`O ${item} está no corredor ${ondeItem}`);
+        
+    }else{
+        console.log(`Produto ${item} não foi encontrado!`);
+        
+    }
+    
+}
+// 9
+
+let basePreco = [15.00, 25.00, 40.00]
+
+function fnAtuliazarPreco(lista, indice, novoValor) {
+    if ((lista.length - 1 ) < indice){
+    lista[indice] = novoValor
+    }
+    console.log(`Novos valores de preço são: ${lista}`);
+    
     
 }
 
-function name(params) {
+//10
+function fnCriarBoletim(nota1, nota2, nota3){
+    let notas = [nota1, nota2, nota3]
+
+    console.log(notas);
     
 }
 
@@ -87,7 +124,10 @@ function name(params) {
 
 
 
-s
+
+
+
+
 
 
 
@@ -109,4 +149,8 @@ fnEncaixarPrioridade(fila, "Dona Clara")
 fnChamarProximo(fila)
 fnDesfazerAcao(acao)
 fnVerificarEstoque (amoxerifado)
-fnVerificarLista(festa)
+fnVerificarLista(festa, "Lucas")
+fnConsultarCorredor(corredores, "Café")
+fnConsultarCorredor(corredores, "Macarrão")
+fnAtuliazarPreco(basePreco, 3, 28.5)
+fnCriarBoletim(8.0, 7.5, 5.5)

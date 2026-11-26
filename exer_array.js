@@ -24,6 +24,18 @@ let pet = nome_colega.shift()
 console.log(nome_colega);
 
 
+let acao = ["Escreveu título", "Aplicou negrito", "Inseriu tabela"] 
+function fnDesfazerAcao(acao) {
+    console.log("Ultima ação foi realizada");
+    acao.pop(acao)
+    
+    console.log(acao);
+    
+    
+}
+
+fnDesfazerAcao(acao)
+
 
 
 
